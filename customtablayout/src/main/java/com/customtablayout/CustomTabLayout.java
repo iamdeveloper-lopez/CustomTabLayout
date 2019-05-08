@@ -150,6 +150,10 @@ public class CustomTabLayout extends LinearLayout {
         return tabParent.getTabCount();
     }
 
+    public int getTabPosition(Tab tab) {
+        return tabParent.getTabPosition(tab);
+    }
+
     public interface BaseOnTabSelectedListener<T extends Tab> {
 
         void onTabSelected(T tab);
@@ -206,6 +210,10 @@ public class CustomTabLayout extends LinearLayout {
 
         public Tab getTabAt(int index) {
             return tabs.get(index);
+        }
+
+        public int getTabPosition(Tab tab) {
+            return tabs.indexOf(tab);
         }
 
     }
