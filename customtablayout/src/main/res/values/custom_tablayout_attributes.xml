@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CustomTabLayout">
+        <attr name="ctl_scrollable" format="boolean" />
+        <attr name="ctl_tab_item_layout" format="reference" />
+        <attr name="ctl_tab_item_text_color" format="color" />
+        <attr name="ctl_tab_item_count" format="integer" />
+        <attr name="ctl_tab_item_titles" format="reference" />
+    </declare-styleable>
+</resources>

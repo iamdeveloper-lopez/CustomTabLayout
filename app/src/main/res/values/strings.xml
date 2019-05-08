@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">CustomTabLayout</string>
+    <string-array name="tabs">
+        <item>All hotspots</item>
+        <item>Favourites</item>
+        <item>My Itinerary</item>
+    </string-array>
+</resources>
