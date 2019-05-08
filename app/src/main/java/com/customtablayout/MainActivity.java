@@ -29,5 +29,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        tabLayout.setSelectedTabAt(0);
+
     }
 }

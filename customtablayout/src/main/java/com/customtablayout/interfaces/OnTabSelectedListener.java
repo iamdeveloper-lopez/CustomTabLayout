@@ -1,7 +1,5 @@
 package com.customtablayout.interfaces;
 
-import android.util.Log;
-
 import com.customtablayout.CustomTabLayout;
 
 public class OnTabSelectedListener implements CustomTabLayout.BaseOnTabSelectedListener<CustomTabLayout.Tab> {
@@ -10,16 +8,16 @@ public class OnTabSelectedListener implements CustomTabLayout.BaseOnTabSelectedL
 
     @Override
     public void onTabSelected(CustomTabLayout.Tab tab) {
-        Log.d(tab.getText(), "onTabSelected()");
+        //this space for rent
     }
 
     @Override
     public void onTabReselected(CustomTabLayout.Tab tab) {
-        Log.d(tab.getText(), "onTabReselected()");
+        //this space for rent
     }
 
     @Override
     public void onTabUnselected(CustomTabLayout.Tab tab) {
-        Log.d(tab.getText(), "onTabUnselected()");
+        //this space for rent
     }
 }

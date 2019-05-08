@@ -134,6 +134,19 @@ public class CustomTabLayout extends LinearLayout {
         addView(tabParent);
     }
 
+    public void setSelectedTabAt(int index) {
+        try {
+            Tab tab = getTabAt(index);
+            tab.setSelected(true);
+            selectedTab = tab;
+            if (onTabSelectedListener != null) {
+                onTabSelectedListener.onTabSelected(tab);
+            }
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+    }
+
     public Tab getSelectedTab() {
         return selectedTab;
     }
@@ -194,7 +207,6 @@ public class CustomTabLayout extends LinearLayout {
         }
 
         public void addTab(Tab tab) {
-            Log.d("TabParent", "addTab()");
             addView(tab);
             tabs.add(tab);
         }
@@ -256,7 +268,6 @@ public class CustomTabLayout extends LinearLayout {
         }
 
         public void setTabOnClickListener(final TabOnClickListener tabOnClickListener) {
-            Log.d("Tab", "setTabOnClickListener()");
             setOnClickListener(new OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -314,8 +325,6 @@ public class CustomTabLayout extends LinearLayout {
         }
 
         public void setTabPosition(TabPosition tabPosition, String indicatorText) {
-            Log.d("Tab", "view count : " + getChildCount());
-            Log.d("Tab", "setTabPosition: " + tabPosition.name());
             indicator = new Indicator(getContext());
             indicator.setTabPosition(tabPosition);
             indicator.setText(indicatorText);
